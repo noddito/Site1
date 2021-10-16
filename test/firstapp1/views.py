@@ -1,22 +1,19 @@
 
 from django.shortcuts import render
 from django.views import View
+from .DataBase import *
 from django.http import HttpResponse
-#from .base import *
-
-class index(View):
-    def get(self,requset):
-        context = {}
-        return render(requset, 'index.html',context=context)
-class MaterialPage(View):
-    def get(self,requset):
-        context = {}
-        return render(requset, 'index.html',context=context)
-
-class ServicePage(View):
-    def get(self, requset):
-        context = {}
-        return render(requset, 'index.html', context=context)
 
 
-# Create your views here.
+class indexM(View):
+    def get(self, request):
+        tasks = get_material()
+        context = {
+            'tasks': tasks
+        }
+        return render(request, 'index.html', context=context)
+
+
+
+
+

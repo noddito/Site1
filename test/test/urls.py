@@ -20,7 +20,6 @@ from firstapp1.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', MaterialPage.as_view()),
-    path('material.html', MaterialPage.as_view()),
-    path('service.html', ServicePage.as_view()),
+    path('', indexM.as_view()),
+
 ]

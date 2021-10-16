@@ -8,6 +8,5 @@
     }
     //Функция скрытия PopUp
     function PopUpHide(){
-        console.log("Какая-либо информация");
         $("#sec-a734").hide();
     }
